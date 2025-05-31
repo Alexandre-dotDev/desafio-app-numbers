@@ -16,6 +16,7 @@ module.exports = {
     port: 3000,
     open: true,
     compress: true,
+    watchFiles: ["./src/**/*.html", "./src/assets/**/*"],
   },
   module: {
     rules: [

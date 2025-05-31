@@ -1,9 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initi al-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
     <title>App-Numbers</title>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <section id="banner">
+        <div class="logo">
+          <img src="./assets/logo.svg" alt="logomarca da numbers" />
+          <span>Numbers</span>
+        </div>
+        <div class="hero">
+          <p>Oneline - Gratuito</p>
+          <h1>Sorteador de números</h1>
+        </div>
+        <div class="guidelines">
+          <div class="guidance-1">
+            <img src="./assets/icon-user.svg" alt="logo de usuário" />
+            <h2>Como funciona o sorteador de números?</h2>
+            <p>
+              O sorteador utiliza um algoritmo de geração aleatória para criar
+              números dentro do intervalo especificado pelo usuário.
+            </p>
+          </div>
+        </div>
+        <div class="guidelines">
+          <div class="guidance-2">
+            <img src="./assets/icon-user.svg" alt="logo de usuário" />
+            <h2>Posso escolher o intervalo dos números?</h2>
+            <p>
+              Sim, você pode definir os valores mínimo e máximo para o intervalo
+              dos números sorteados.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="raffle">
+        <div class="call">
+          <h2 class="title-2">Quero sortear:</h2>
+          <p>
+            defina o intervalo e a quantidade de números, clique em "Sortear" e
+            veja os resultados na tela. É rápido e fácil!
+          </p>
+          <form>
+            <fieldset>
+              <div class="inputs">
+                <label for="numbers">Números</label>
+                <input id="numbers" type="number" value="2" readonly />
+              </div>
+              <div class="inputs">
+                <label for="numbers">de</label>
+                <input id="numbers" type="number" />
+              </div>
+              <div class="inputs">
+                <label for="numbers">até</label>
+                <input id="numbers" type="number" />
+              </div>
+              <div class="no-repeat">
+                <div class="toggle"></div>
+                <span>Não repetir número</span>
+              </div>
+              <button type="submit">Sortear</button>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
