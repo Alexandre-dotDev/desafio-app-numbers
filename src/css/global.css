@@ -14,7 +14,7 @@
   --content-brand: #c58de7;
   --color-ivert: #030203;
 
-  /* Backgraound */
+  /* Background */
   --bg-primary: #020202;
   --bg-secondary: #111012;
   --bg-tertiary: #24222e;
@@ -48,21 +48,53 @@
   --ff-sora: "Sora", sans-serif;
   --ff-roboto-mono: "Roboto Mono", monospace;
   --ff-roboto-flex: "Roboto Flex", sans-serif;
-  --sora-lg: 900 4.5rem/130% var(ff-sora);
-  --sora-md: 900 2.5rem/1.3 var(ff-sora);
-  --sora-sm: 600 2rem/1.3 var(ff-sora;);
-  --roboto-overline: 600 1rem/1.5 var(ff-roboto-mono);
-  --paragraph-lg: 500 1rem/1.5 va(ff-roboto-flex);
-  --paragraph-md: 500 0.975rem/1.5 va(ff-roboto-flex);
-  --paragraph-sm: 500 0.75rem/1.5 va(ff-roboto-flex);
-  --label-md: 600 1.25rem/1.5 va(ff-roboto-flex);
-  --label-sm: 600 1rem/1.5 va(ff-roboto-flex);
+  --sora-lg: 900 4.5rem/130% var(--ff-sora);
+  --sora-md: 900 2.5rem/130% var(--ff-sora);
+  --sora-sm: 600 2rem/130% var(--ff-sora);
+  --roboto-overline: 600 1rem/150% var(--ff-roboto-mono);
+  --paragraph-lg: 500 1rem/150% var(--ff-roboto-flex);
+  --paragraph-md: 400 0.875rem/150% var(--ff-roboto-flex);
+  --paragraph-sm: 400 0.75rem/150% var(--ff-roboto-flex);
+  --label-md: 600 1.25rem/150% var(--ff-roboto-flex);
+  --label-sm: 600 1rem/150% var(--ff-roboto-flex);
 }
 
+html,
 body {
-  background: var(--bg-border);
+  font-size: 16px;
+  overflow-x: none;
+  color: var(--content-primary);
 }
 
-h1 {
-  font-family: var(--ff-sora);
+@media (width >= 80rem) {
+  body {
+    max-width: 100%;
+    height: 100vh;
+    background-color: var(--bg-primary);
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("../assets/bg-image-1.png");
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media (width <= 24.4275rem) {
+  body {
+    max-width: 100%;
+    height: 100vh;
+    background-color: var(--bg-primary);
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("../assets/bg-image-1.png");
+    background-size: cover;
+    background-position: center;
+  }
 }
