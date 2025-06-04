@@ -1,0 +1,61 @@
+#banner {
+  grid-area: banner;
+
+  & .logo {
+    display: flex;
+    justify-content: center;
+    gap: 0.6875rem;
+    margin-top: 2.75rem;
+    margin-bottom: 2.875rem;
+
+    & img {
+      width: 2.375rem;
+      height: 2.375rem;
+    }
+
+    & span {
+      font-family: var(--ff-sora);
+      font-weight: 900;
+      font-size: 1.5rem;
+      line-height: 130%;
+      text-transform: uppercase;
+    }
+  }
+
+  & .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    gap: 0.5rem;
+    width: 100%;
+
+    & p {
+      font: var(--roboto-overline);
+      text-transform: uppercase;
+      color: var(--bg-content);
+    }
+    & h1 {
+      font: var(--sora-md);
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media (width >= 80em) {
+  #banner {
+    width: 32rem;
+
+    & .logo {
+      justify-content: flex-start;
+      margin-top: 4.75rem;
+    }
+
+    & .hero {
+      width: inherit;
+      margin-top: 5.5625rem;
+      & h1 {
+        font: var(--sora-lg);
+      }
+    }
+  }
+}

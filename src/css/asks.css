@@ -1,0 +1,51 @@
+#asks {
+  grid-area: asks;
+  margin-bottom: 2.75rem;
+  margin-top: 5rem;
+
+  & .guidelines {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2.25rem;
+
+    & .guidance {
+      position: relative;
+      display: flex;
+
+      & img {
+        position: absolute;
+        width: 1.25rem;
+        height: 1.25rem;
+        top: 0;
+        left: 0;
+      }
+
+      & .guidance-call {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        & h2 {
+          padding-left: 1.75rem;
+          color: var(--content-brand);
+          font: var(--paragraph-md);
+        }
+
+        & .call-text {
+          padding-left: 1.75rem;
+          color: var(--content-secondary);
+          font: var(--paragraph-sm);
+        }
+      }
+    }
+  }
+}
+
+@media (width >= 80em) {
+  #asks {
+    grid-area: asks;
+    margin-top: 2.375rem;
+    width: 24.125rem;
+  }
+}
