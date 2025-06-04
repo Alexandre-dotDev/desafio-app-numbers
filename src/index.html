@@ -61,24 +61,42 @@
             <fieldset>
               <div class="wrapper-inputs">
                 <div class="inputs">
-                  <label for="numbers">Números</label>
-                  <input id="numbers" type="number" value="2" readonly />
+                  <label for="numbers"
+                    >Números
+                    <div class="input-wrapper">
+                      <input id="numbers" type="number" value="2" readonly />
+                    </div>
+                  </label>
                 </div>
                 <div class="inputs">
-                  <label for="numbers">de</label>
-                  <input id="numbers" type="number" min="1" />
+                  <label for="numbers"
+                    >de
+                    <div class="input-wrapper">
+                      <input id="numbers" type="number" min="1" />
+                    </div>
+                  </label>
                 </div>
                 <div class="inputs">
-                  <label for="numbers">até</label>
-                  <input id="numbers" type="number" min="1" />
+                  <label for="numbers"
+                    >até
+                    <div class="input-wrapper">
+                      <input id="numbers" type="number" min="1" />
+                    </div>
+                  </label>
                 </div>
               </div>
+
               <div class="wrapper-btn">
-                <div class="no-repeat">
-                  <div class="toggle"></div>
-                  <span>Não repetir número</span>
+                <div class="toggle">
+                  <label class="switch" for="toggle">
+                    <input id="toggle" type="checkbox" />
+                    <span class="slider"></span>
+                  </label>
+                  <span>Não repertir número</span>
                 </div>
-                <button aria-label="Sortear &#129106;" type="submit"></button>
+                <button aria-label="Sortear" type="submit">
+                  <span>&#129106;</span>
+                </button>
               </div>
             </fieldset>
           </form>
