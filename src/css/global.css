@@ -61,14 +61,16 @@
 
 html,
 body {
-  font-size: 16px;
-  overflow-x: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: none;
   color: var(--content-primary);
+  font-size: 16px;
 }
 
 @media (width >= 80rem) {
   body {
-    max-width: 100%;
     height: 100vh;
     background-color: var(--bg-primary);
     background-image: linear-gradient(
@@ -83,10 +85,8 @@ body {
   }
 }
 
-@media (width <= 24.4275rem) {
+@media (width < 80rem) {
   body {
-    max-width: 100%;
-    height: 100vh;
     background-color: var(--bg-primary);
     background-image: linear-gradient(
         to bottom,

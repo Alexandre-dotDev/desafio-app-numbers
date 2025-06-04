@@ -1,235 +1,31 @@
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding-inline: 2.25rem;
+@import "./banner.css";
+@import "./raffle.css";
+@import "./asks.css";
 
-  & #banner {
-    width: 100%;
-    display: inherit;
-    flex-direction: inherit;
-    align-items: center;
+@media (width < 80rem) {
+  .layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "banner"
+      "raffle"
+      "asks";
 
-    & .logo {
-      display: flex;
-      align-items: center;
-      gap: 0.6875rem;
-      margin-top: 2.75rem;
-      margin-bottom: 2.875rem;
-
-      & img {
-        width: 2.375rem;
-        height: 2.375rem;
-      }
-
-      & span {
-        font-family: var(--ff-sora);
-        font-weight: 900;
-        font-size: 1.5rem;
-        line-height: 130%;
-        text-transform: uppercase;
-      }
-    }
-
-    & .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: self-start;
-      gap: 0.5rem;
-      width: 100%;
-
-      & p {
-        font: var(--roboto-overline);
-        text-transform: uppercase;
-        color: var(--bg-content);
-      }
-      & h1 {
-        font: var(--sora-md);
-        text-transform: uppercase;
-      }
-    }
-  }
-
-  & #raffle {
-    width: 100%;
-    margin-top: 2.625rem;
-    /* border: solid green; */
-
-    & .title {
-      font: var(--label-md);
-      text-transform: uppercase;
-    }
-    & p {
-      font: var(--paragraph-md);
-      color: var(--content-tertiary);
-    }
-
-    & form {
-      margin-top: 2.5rem;
-
-      & fieldset {
-        all: unset;
-        display: flex;
-        flex-direction: column;
-
-        & .wrapper-inputs {
-          display: flex;
-          gap: 0.75rem;
-
-          & .inputs {
-            display: flex;
-            flex-direction: column;
-
-            & label {
-              font: var(--label-sm);
-              text-transform: uppercase;
-              text-align: center;
-            }
-
-            & input[type="number"] {
-              all: unset;
-              width: 5.375rem;
-              height: 3.5rem;
-              margin-top: 0.5rem;
-              font: var(--sora-sm);
-              text-align: center;
-              vertical-align: middle;
-              border-radius: 0.5rem;
-
-              background-color: var(--bg-secondary);
-
-              -moz-appearance: textfield;
-
-              &::-webkit-inner-spin-button,
-              &::-webkit-outer-spin-button {
-                -webkit-appearance: none;
-                margin: 0;
-              }
-
-              &:focus {
-                text-align: center;
-              }
-            }
-          }
-        }
-
-        & .wrapper-btn {
-          margin-top: 1.25rem;
-
-          & .no-repeat {
-            display: flex;
-            gap: 0.5rem;
-
-            & .toggle {
-              position: relative;
-              width: 1.875rem;
-              height: 1.25rem;
-
-              border-radius: 1rem;
-              background: var(--bg-gradient);
-
-              &::after {
-                content: "";
-                position: absolute;
-                width: 0.875rem;
-                height: 0.875rem;
-
-                top: 50%;
-                right: 3px;
-                transform: translateY(-50%);
-
-                border-radius: 50%;
-                background-color: var(--content-secondary);
-              }
-            }
-
-            & span {
-              font: var(--paragraph-sm);
-            }
-          }
-        }
-
-        & button {
-          all: unset;
-          position: relative;
-          width: 100%;
-          height: 3.5rem;
-          margin-top: 2.5rem;
-
-          text-align: center;
-          text-transform: uppercase;
-          font: var(--roboto-overline);
-
-          border-radius: 0.5rem;
-          background: var(--bg-tertiary);
-          cursor: pointer;
-
-          &::after {
-            content: "";
-            position: absolute;
-            width: 1.5rem;
-            height: 1.5rem;
-            right: 5.5rem;
-            background: url(../assets/arrow-left.svg) no-repeat center;
-          }
-        }
-      }
-    }
-  }
-
-  & #asks {
-    width: 100vw;
-    margin-bottom: 2.75rem;
-    margin-top: 5rem;
-    padding-inline: 2.25rem;
-
-    & .guidelines {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      gap: 2.25rem;
-      /* padding-inline: 2.25rem; */
-
-      width: 100%;
-      height: 12.5rem;
-
-      & .guidance {
-        position: relative;
-        display: flex;
-
-        & img {
-          position: absolute;
-          width: 1.25rem;
-          height: 1.25rem;
-          top: 0;
-          left: 0;
-        }
-        & .guidance-call {
-          position: relative;
-          display: flex;
-          flex-direction: column;
-
-          & h2 {
-            padding-left: 1.75rem;
-            color: var(--content-brand);
-            font: var(--paragraph-md);
-          }
-
-          & .call-text {
-            padding-left: 1.75rem;
-            color: var(--content-secondary);
-            font: var(--paragraph-sm);
-          }
-        }
-      }
-    }
+    padding-inline: clamp(1rem, 3vw, 2.25rem);
   }
 }
 
-@media (width >= 80em) {
-  main {
+@media (width >= 80rem) {
+  .layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "banner raffle"
+      "asks raffle";
+
+    column-gap: clamp(2rem, 5vw, 6.75rem);
+    /* padding-inline: clamp(1rem, 5vw, 8.375rem); */
+
+    /* border: solid yellow; */
   }
 }

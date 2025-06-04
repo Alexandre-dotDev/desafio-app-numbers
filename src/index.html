@@ -14,7 +14,7 @@
     <title>App-Numbers</title>
   </head>
   <body>
-    <main>
+    <div class="layout">
       <section id="banner">
         <div class="logo">
           <img src="./assets/logo.svg" alt="logomarca da numbers" />
@@ -23,6 +23,31 @@
         <div class="hero">
           <p>Oneline - Gratuito</p>
           <h1>Sorteador de números</h1>
+        </div>
+      </section>
+      <section id="asks">
+        <div class="guidelines">
+          <div class="guidance">
+            <img src="./assets/icon-user.svg" alt="logo de usuário" />
+            <div class="guidance-call">
+              <h2>Como funciona o sorteador de números?</h2>
+              <p class="call-text">
+                O sorteador utiliza um algoritmo de geração aleatória para criar
+                números dentro do intervalo especificado pelo usuário.
+              </p>
+            </div>
+          </div>
+
+          <div class="guidance">
+            <img src="./assets/icon-user.svg" alt="logo de usuário" />
+            <div class="guidance-call">
+              <h2>Posso escolher o intervalo dos números?</h2>
+              <p class="call-text">
+                Sim, você pode definir os valores mínimo e máximo para o
+                intervalo dos números sorteados.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
       <section id="raffle">
@@ -53,37 +78,12 @@
                   <div class="toggle"></div>
                   <span>Não repetir número</span>
                 </div>
-                <button type="submit">Sortear</button>
+                <button aria-label="Sortear &#129106;" type="submit"></button>
               </div>
             </fieldset>
           </form>
         </div>
       </section>
-      <section id="asks">
-        <div class="guidelines">
-          <div class="guidance">
-            <img src="./assets/icon-user.svg" alt="logo de usuário" />
-            <div class="guidance-call">
-              <h2>Como funciona o sorteador de números?</h2>
-              <p class="call-text">
-                O sorteador utiliza um algoritmo de geração aleatória para criar
-                números dentro do intervalo especificado pelo usuário.
-              </p>
-            </div>
-          </div>
-
-          <div class="guidance">
-            <img src="./assets/icon-user.svg" alt="logo de usuário" />
-            <div class="guidance-call">
-              <h2>Posso escolher o intervalo dos números?</h2>
-              <p class="call-text">
-                Sim, você pode definir os valores mínimo e máximo para o
-                intervalo dos números sorteados.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+    </div>
   </body>
 </html>

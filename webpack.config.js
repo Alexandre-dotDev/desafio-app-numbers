@@ -37,7 +37,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "App-Numbers",
       template: "./src/index.html",
-      favicon: "./src/assets/icon-1.svg",
+      favicon: "./src/assets/logo.svg",
     }),
     new CopyWebpackPlugin({
       patterns: [{ from: "./src/assets", to: "assets" }],
