@@ -30,34 +30,81 @@
             display: flex;
             flex-direction: column;
 
+            overflow: hidden;
+
             & label {
               font: var(--label-sm);
               text-transform: uppercase;
               text-align: center;
-            }
+              transition: 0.2s;
 
-            & input[type="number"] {
-              all: unset;
-              width: 5.375rem;
-              height: 3.5rem;
-              margin-top: 0.5rem;
-              font: var(--sora-sm);
-              text-align: center;
-              vertical-align: middle;
-              border-radius: 0.5rem;
+              & .input-wrapper {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 5.375rem;
+                height: 3.5rem;
+                margin-top: 0.75rem;
+                border-radius: 0.5rem;
+                overflow: hidden;
+                z-index: 0;
 
-              background-color: var(--bg-secondary);
+                &:hover::before {
+                  content: "";
+                  position: absolute;
+                  top: -2rem;
+                  left: -2.5rem;
+                  width: 200%;
+                  height: 200%;
+                  transform: rotate(0deg);
+                  background: var(--bg-border);
+                  animation: rolling 4s linear infinite;
+                  border-radius: inherit;
+                  z-index: -1;
+                  filter: blur(4px);
+                  pointer-events: none;
+                }
 
-              /* -moz-appearance: textfield; */
+                &::after {
+                  content: "";
+                  position: absolute;
+                  top: 1px;
+                  left: 1px;
+                  right: 1px;
+                  bottom: 1px;
+                  background: var(--bg-secondary);
+                  border-radius: calc(0.5rem - 1px);
+                  z-index: 1;
+                  transition: 0.2s;
+                }
+                &:hover::after {
+                  background: var(--bg-tertiary);
+                }
 
-              &::-webkit-inner-spin-button,
-              &::-webkit-outer-spin-button {
-                -webkit-appearance: none;
-                margin: 0;
+                input[type="number"] {
+                  all: unset;
+                  position: relative;
+                  width: 100%;
+                  height: 100%;
+                  font: var(--sora-sm);
+                  text-align: center;
+                  z-index: 2;
+
+                  &::-webkit-inner-spin-button,
+                  &::-webkit-outer-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                  }
+
+                  &:hover {
+                    color: var(--content-primary);
+                  }
+                }
               }
 
-              &:focus {
-                text-align: center;
+              &:hover {
+                color: var(--content-brand);
               }
             }
           }
@@ -66,32 +113,54 @@
         & .wrapper-btn {
           margin-top: 1.25rem;
 
-          & .no-repeat {
+          & .toggle {
             display: flex;
             gap: 0.5rem;
 
-            & .toggle {
+            & .switch {
               position: relative;
+              display: inline-block;
               width: 1.875rem;
               height: 1.25rem;
 
-              border-radius: 1rem;
-              background: var(--bg-gradient);
+              & input {
+                opacity: 0;
+                width: 0;
+                height: 0;
+              }
 
-              &::after {
-                content: "";
+              & .slider {
                 position: absolute;
-                width: 0.875rem;
-                height: 0.875rem;
-
-                top: 50%;
-                right: 3px;
-                transform: translateY(-50%);
-
-                border-radius: 50%;
-                background-color: var(--content-secondary);
-
                 cursor: pointer;
+                background: var(--bg-tertiary);
+                transition: 0.4s;
+                border-radius: 28px;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                transition: 0.6s;
+
+                &::before {
+                  content: "";
+                  position: absolute;
+                  width: 0.875rem;
+                  height: 0.875rem;
+                  left: 3px;
+                  bottom: 3px;
+                  background: var(--content-secondary);
+                  transition: 0.4s;
+                  border-radius: 50%;
+                }
+              }
+
+              input:checked + .slider {
+                transition: 0.6s;
+                background: var(--bg-gradient);
+              }
+
+              input:checked + .slider::before {
+                transform: translateX(10px);
               }
             }
 
@@ -99,59 +168,77 @@
               font: var(--paragraph-sm);
             }
           }
-        }
 
-        & button {
-          all: unset;
-          position: relative;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 100%;
-          height: 3.5rem;
-          margin-top: 2.5rem;
-
-          text-transform: uppercase;
-
-          border: none;
-          outline: none;
-          border-radius: 0.5rem;
-
-          overflow: hidden;
-          cursor: pointer;
-
-          &:hover::before {
-            content: "";
-            position: absolute;
-            width: 35rem;
-            height: 35rem;
-            top: -10rem;
-            left: -1.5rem;
-
-            border-radius: 50%;
-            background: var(--bg-border);
-
-            transform: rotate(0deg);
-            animation: rotar 5s linear infinite;
-            filter: blur(10px);
-
-            z-index: -1;
-          }
-
-          &::after {
-            content: attr(aria-label);
+          & button {
+            all: unset;
+            position: relative;
             display: flex;
-            align-items: center;
             justify-content: center;
-            width: 98%;
-            height: 3.3rem;
-            right: 5.5rem;
+            align-items: center;
+            width: 100%;
+            height: 3.5rem;
+            margin-top: 2.5rem;
 
-            font: var(--roboto-overline);
-            font-size: 1.25rem;
+            text-transform: uppercase;
 
+            border: none;
+            outline: none;
             border-radius: 0.5rem;
-            background: var(--bg-tertiary);
+
+            overflow: hidden;
+            cursor: pointer;
+
+            &::before {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 800px;
+
+              background: var(--bg-border);
+
+              transform: rotate(0deg);
+              animation: rolling 5s linear infinite;
+              filter: blur(5px);
+              opacity: 0;
+              z-index: -1;
+            }
+
+            &:hover::before {
+              opacity: 1;
+            }
+
+            &::after {
+              content: attr(aria-label);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 99%;
+              height: 3.4rem;
+              right: 5.5rem;
+
+              font: var(--roboto-overline);
+              border: none;
+              outline: none;
+              border-radius: 0.5rem;
+              background: var(--bg-tertiary);
+              transition: 0.2s;
+            }
+
+            &:hover::after {
+              background: var(--bg-secondary);
+            }
+
+            & span {
+              position: absolute;
+              top: 0.6rem;
+              left: 60%;
+              font-size: 1.5rem;
+              transform: translateX(0);
+            }
+
+            &:hover span {
+              animation: loop 1.1s linear infinite alternate;
+            }
           }
         }
       }
@@ -159,8 +246,13 @@
   }
 }
 
-@keyframes rotar {
+@keyframes loop {
   100% {
+    transform: translateX(8px);
+  }
+}
+@keyframes rolling {
+  to {
     transform: rotate(360deg);
   }
 }
