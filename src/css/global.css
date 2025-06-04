@@ -31,11 +31,11 @@
   /* gradient-border */
   --bg-border: linear-gradient(
     90deg,
-    #77c0af 0%,
-    #d1dc97 14.84%,
-    #e9a9b3 15%,
-    #d586e0 79%,
-    #91a1fa 84.58%
+    #77c0af 16%,
+    #d1dc97 24.84%,
+    #e9a9b3 35%,
+    #d586e0 49%,
+    #91a1fa 64.58%
   );
 
   /*gradient-bg  */
