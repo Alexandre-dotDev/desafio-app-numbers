@@ -50,6 +50,7 @@
           </div>
         </div>
       </section>
+
       <section id="raffle">
         <div class="call">
           <h2 class="title">Quero sortear:</h2>
@@ -68,6 +69,7 @@
                     </div>
                   </label>
                 </div>
+
                 <div class="inputs">
                   <label for="numbers"
                     >de
@@ -94,12 +96,30 @@
                   </label>
                   <span>Não repertir número</span>
                 </div>
-                <button aria-label="Sortear" type="submit">
-                  <span>&#129106;</span>
+                <button class="button-loop" type="submit">
+                  <span>Sortear</span>
+                  <div class="arrow-left">
+                    <img src="./assets/arrow-left.svg" alt="" />
+                  </div>
                 </button>
               </div>
             </fieldset>
           </form>
+        </div>
+        <div class="results">
+          <h2>Resultado do Sorteio</h2>
+          <p><span>1&#176;</span> Resultado</p>
+          <div class="values">
+            <div class="value">23</div>
+            <div class="value">144</div>
+          </div>
+          <button class="button-rotate" type="submit">
+            <span>Sortear Novamente</span>
+            <div class="refresh">
+              <img class="circle" src="./assets/circle.svg" alt="" />
+              <img class="play" src="./assets/play.svg" alt="" />
+            </div>
+          </button>
         </div>
       </section>
     </div>

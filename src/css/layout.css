@@ -1,6 +1,9 @@
 @import "./banner.css";
+@import "./button-loop.css";
+@import "./button-rotate.css";
 @import "./raffle.css";
 @import "./asks.css";
+@import "./result.css";
 
 @media (width < 80rem) {
   .layout {

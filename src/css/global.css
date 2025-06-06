@@ -52,6 +52,7 @@
   --sora-md: 900 2.5rem/130% var(--ff-sora);
   --sora-sm: 600 2rem/130% var(--ff-sora);
   --roboto-overline: 600 1rem/150% var(--ff-roboto-mono);
+  --roboto-mono: 600 3rem/150% var(--ff-roboto-mono);
   --paragraph-lg: 500 1rem/150% var(--ff-roboto-flex);
   --paragraph-md: 400 0.875rem/150% var(--ff-roboto-flex);
   --paragraph-sm: 400 0.75rem/150% var(--ff-roboto-flex);
