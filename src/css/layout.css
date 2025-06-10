@@ -4,6 +4,7 @@
 @import "./raffle.css";
 @import "./asks.css";
 @import "./result.css";
+@import "./animation.css";
 
 @media (width < 80rem) {
   .layout {

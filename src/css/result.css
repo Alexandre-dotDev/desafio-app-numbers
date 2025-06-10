@@ -1,9 +1,8 @@
 .results {
-  display: flex;
+  display: flex; /*Ativar via js quando o button sortear for clicado*/
   flex-direction: column;
   align-items: center;
   width: 100%;
-  /* max-height: 12.375rem; */
   margin-top: 4.4375rem;
 
   & h2 {
@@ -17,17 +16,23 @@
   }
 
   & .values {
-    display: flex;
+    position: relative;
+    display: flex; /*Desabilitar quando o button sortear novamente for clicado*/
     justify-content: space-between;
     column-gap: 1rem;
     margin-top: 2.5rem;
+    background-color: transparent;
+    transition: all 200ms;
+  }
 
-    & .value {
-      font: var(--roboto-mono);
-      text-align: end;
-      vertical-align: middle;
+  & button {
+    opacity: 0;
+    animation: showButton 0.2s 5s forwards;
+  }
+}
 
-      color: var(--content-brand);
-    }
+@keyframes showButton {
+  to {
+    opacity: 1;
   }
 }

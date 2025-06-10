@@ -12,7 +12,7 @@
   --content-secondary: #c7c0cc;
   --content-tertiary: #d9d9d9;
   --content-brand: #c58de7;
-  --color-ivert: #030203;
+  --color-invert: #030203;
 
   /* Background */
   --bg-primary: #020202;
@@ -53,6 +53,7 @@
   --sora-sm: 600 2rem/130% var(--ff-sora);
   --roboto-overline: 600 1rem/150% var(--ff-roboto-mono);
   --roboto-mono: 600 3rem/150% var(--ff-roboto-mono);
+  --roboto-mono-lg: 600 4rem/150% var(--ff-roboto-mono);
   --paragraph-lg: 500 1rem/150% var(--ff-roboto-flex);
   --paragraph-md: 400 0.875rem/150% var(--ff-roboto-flex);
   --paragraph-sm: 400 0.75rem/150% var(--ff-roboto-flex);
