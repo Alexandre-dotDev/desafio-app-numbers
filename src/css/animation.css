@@ -1,0 +1,87 @@
+.animation {
+  position: relative;
+  min-width: 6.25rem;
+  height: 6.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: transparent;
+
+  & .value {
+    position: absolute;
+    min-width: 6.25rem;
+    height: 6.25rem;
+    background-color: var(--bg-brand);
+    border-radius: 1.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transform: scale(0);
+    animation: showSquare 400ms 200ms forwards, hideSquare 2s 3.4s forwards,
+      spinSquare 2s 1s forwards;
+  }
+
+  & p.number-1 {
+    position: absolute;
+
+    font: var(--roboto-mono-lg);
+    color: var(--color-invert);
+    opacity: 0;
+    animation: showNumberOpacity 0.5s 2.5s forwards;
+    pointer-events: none;
+  }
+
+  & p.number-2 {
+    position: absolute;
+
+    font: var(--roboto-mono);
+    color: var(--content-brand);
+    opacity: 0;
+    animation: showNumber 5s 3.4s forwards;
+    pointer-events: none;
+  }
+}
+
+@keyframes showSquareScale {
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes spinSquare {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes hideSquare {
+  to {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes showNumberOpacity {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes showNumber {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes hideNumber {
+  to {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
