@@ -1,7 +1,7 @@
 #asks {
   grid-area: asks;
   margin-bottom: 2.75rem;
-  margin-top: 5rem;
+  margin-top: 4.9375rem;
 
   & .guidelines {
     position: relative;
@@ -36,6 +36,7 @@
           padding-left: 1.75rem;
           color: var(--content-secondary);
           font: var(--paragraph-sm);
+          max-width: 90%;
         }
       }
     }

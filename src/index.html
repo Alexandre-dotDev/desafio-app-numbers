@@ -52,86 +52,96 @@
       </section>
 
       <section id="raffle">
-        <div class="call">
-          <h2 class="title">Quero sortear:</h2>
-          <p>
-            Defina o intervalo e a quantidade de números, clique em "Sortear" e
-            veja os resultados na tela. É rápido e fácil!
-          </p>
-          <form>
-            <fieldset>
-              <div class="wrapper-inputs">
-                <div class="inputs">
-                  <label for="numbers"
-                    >Números
-                    <div class="input-wrapper">
-                      <input id="numbers" type="number" value="2" readonly />
-                    </div>
-                  </label>
-                </div>
+        <!--Ocutar quando tiver o primeiro sorteio -->
+        <form>
+          <fieldset class="inputsID">
+            <h2 class="title">Quero sortear:</h2>
+            <p>
+              Defina o intervalo e a quantidade de números, clique em "Sortear"
+              e veja os resultados na tela. É rápido e fácil!
+            </p>
 
-                <div class="inputs">
-                  <label for="numbers"
-                    >de
-                    <div class="input-wrapper">
-                      <input id="numbers" type="number" min="1" />
-                    </div>
-                  </label>
-                </div>
-                <div class="inputs">
-                  <label for="numbers"
-                    >até
-                    <div class="input-wrapper">
-                      <input id="numbers" type="number" min="1" />
-                    </div>
-                  </label>
-                </div>
-              </div>
-
-              <div class="wrapper-btn">
-                <div class="toggle">
-                  <label class="switch" for="toggle">
-                    <input id="toggle" type="checkbox" />
-                    <span class="slider"></span>
-                  </label>
-                  <span>Não repertir número</span>
-                </div>
-                <button class="button-loop" type="submit">
-                  <span>Sortear</span>
-                  <div class="arrow-left">
-                    <img src="./assets/arrow-left.svg" alt="" />
+            <div class="wrapper-inputs">
+              <div class="inputs">
+                <label for="numbers"
+                  >Números
+                  <div class="input-wrapper">
+                    <input
+                      id="numbers"
+                      type="number"
+                      class="number"
+                      value="2"
+                      readonly
+                    />
                   </div>
-                </button>
+                </label>
               </div>
-            </fieldset>
-          </form>
-        </div>
-        <div class="results">
-          <h2>Resultado do Sorteio</h2>
-          <p><span>1&#176;</span> Resultado</p>
 
-          <div class="values">
-            <div class="animation">
-              <div class="value"></div>
-              <p class="number-1">23</p>
-              <p class="number-2">23</p>
+              <div class="inputs">
+                <label for="numbers"
+                  >de
+                  <div class="input-wrapper">
+                    <input
+                      id="numbers"
+                      class="number-from"
+                      type="number"
+                      min="1"
+                    />
+                  </div>
+                </label>
+              </div>
+              <div class="inputs">
+                <label for="numbers"
+                  >até
+                  <div class="input-wrapper">
+                    <input
+                      id="numbers"
+                      class="number-to"
+                      type="number"
+                      min="1"
+                    />
+                  </div>
+                </label>
+              </div>
             </div>
 
-            <!-- <div class="animation">
-              <div class="value"></div>
-              <p class="number-1">71</p>
-              <p class="number-2">71</p>
-            </div> -->
-          </div>
-
-          <button class="button-rotate" type="submit">
-            <span>Sortear Novamente</span>
-            <div class="refresh">
-              <img class="circle" src="./assets/circle.svg" alt="" />
-              <img class="play" src="./assets/play.svg" alt="" />
+            <div class="wrapper-btn">
+              <div class="toggle">
+                <label class="switch" for="toggle">
+                  <input id="toggle" type="checkbox" />
+                  <span class="slider"></span>
+                </label>
+                <span>Não repertir número</span>
+              </div>
+              <button class="button-loop">
+                <span>Sortear</span>
+                <div class="arrow-left">
+                  <img src="./assets/arrow-left.svg" alt="" />
+                </div>
+              </button>
             </div>
-          </button>
-        </div>
+          </fieldset>
+
+          <!--Ocutar quando não tiver sorteio -->
+          <fieldset class="resultsID">
+            <div class="results">
+              <h2>Resultado do Sorteio</h2>
+              <p>
+                <span><span class="counter">1</span>&#176;</span> Resultado
+              </p>
+
+              <div class="values"></div>
+
+              <button class="button-rotate">
+                <span>Sortear Novamente</span>
+                <div class="refresh">
+                  <img class="circle" src="./assets/circle.svg" alt="" />
+                  <img class="play" src="./assets/play.svg" alt="" />
+                </div>
+              </button>
+            </div>
+          </fieldset>
+        </form>
       </section>
     </div>
   </body>

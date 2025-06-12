@@ -71,6 +71,19 @@ body {
   font-size: 16px;
 }
 
+fieldset {
+  all: unset;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.disabled {
+  display: none;
+}
+.enabled {
+  display: flex;
+}
+
 @media (width >= 80rem) {
   body {
     height: 100vh;

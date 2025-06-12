@@ -1,10 +1,12 @@
+@import "../css/global.css";
 @import "./banner.css";
-@import "./button-loop.css";
-@import "./button-rotate.css";
 @import "./raffle.css";
 @import "./asks.css";
 @import "./result.css";
 @import "./animation.css";
+@import "./form.css";
+@import "./inputs.css";
+@import "./button.css";
 
 @media (width < 80rem) {
   .layout {
@@ -22,14 +24,11 @@
 @media (width >= 80rem) {
   .layout {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 32.125rem;
     grid-template-areas:
       "banner raffle"
       "asks raffle";
 
     column-gap: clamp(2rem, 5vw, 6.75rem);
-    /* padding-inline: clamp(1rem, 5vw, 8.375rem); */
-
-    /* border: solid yellow; */
   }
 }

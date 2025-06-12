@@ -11,7 +11,12 @@
   font: var(--roboto-overline);
   text-transform: uppercase;
   border-radius: 0.5rem;
+
+  opacity: 0;
+  animation: showButton 0.2s 5s forwards;
+
   overflow: hidden;
+
   cursor: pointer;
 
   &::before {
@@ -96,5 +101,11 @@
 @keyframes rolling {
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes showButton {
+  to {
+    opacity: 1;
   }
 }
